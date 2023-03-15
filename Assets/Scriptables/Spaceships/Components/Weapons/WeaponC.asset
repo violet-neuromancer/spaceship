@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: WeaponC
   _componentType: 0
-  _shootDuration: 5
+  _recharge: 5
   _damage: 20

@@ -5,10 +5,10 @@ namespace Settings.Scriptables
     [CreateAssetMenu(menuName = "SpaceshipSettings/New Weapon Settings", fileName = "NewWeaponSettings")]
     public class WeaponSettings : ComponentSettings
     {
-        [SerializeField] private int _shootDuration;
-        [SerializeField] private int _damage;
+        [SerializeField] private float _recharge;
+        [SerializeField] private float _damage;
 
-        public int ShootDuration => _shootDuration;
-        public int Damage => _damage;
+        public float Recharge => _recharge;
+        public float Damage => _damage;
     }
 }

@@ -4,15 +4,20 @@ namespace Model
 {
     public class Weapon
     {
-        private int _shootDuration;
-        private int _damage;
-        
-        public int ShootDuration => _shootDuration;
-        public int Damage => _damage;
+        private float _recharge;
+        private float _damage;
+
+        public float Recharge
+        {
+            get => _recharge;
+            set => _recharge = value;
+        }
+
+        public float Damage => _damage;
 
         public Weapon(WeaponSettings settings)
         {
-            _shootDuration = settings.ShootDuration;
+            _recharge = settings.Recharge;
             _damage = settings.Damage;
         }
     }

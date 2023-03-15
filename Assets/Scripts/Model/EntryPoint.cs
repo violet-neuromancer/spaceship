@@ -22,7 +22,8 @@ namespace Model
                 ServiceLocator.Register(coroutinesHolderInstance);
             }
 
-            var shipPreparationService = new ShipPreparationService(_spaceshipSettingsA, _spaceshipSettingsB);
+            var modulesService = new ModulesService();
+            var shipPreparationService = new ShipPreparationService(_spaceshipSettingsA, _spaceshipSettingsB, modulesService);
             ServiceLocator.Register(shipPreparationService);
         }
     }

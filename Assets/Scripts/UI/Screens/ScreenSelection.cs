@@ -18,5 +18,10 @@ namespace UI.Screens
             _widgetSpaceshipASelection.Init(_shipPreparationService.SpaceshipA);
             _widgetSpaceshipBSelection.Init(_shipPreparationService.SpaceshipB);
         }
+
+        public void OnClick()
+        {
+            _shipPreparationService.PrepareComponents();
+        }
     }
 }

@@ -16,4 +16,4 @@ MonoBehaviour:
   _componentType: 1
   _statName: ShieldRegenPerSec
   _valueType: 1
-  _value: 20
+  _value: -0.2

@@ -8,10 +8,10 @@ namespace Settings.Scriptables
     {
         [SerializeField] private string _statName;
         [SerializeField] private ValueType _valueType;
-        [SerializeField] private int _value;
+        [SerializeField] private float _value;
 
         public string StatName => _statName;
         public ValueType ValueType => _valueType;
-        public int Value => _value;
+        public float Value => _value;
     }
 }
