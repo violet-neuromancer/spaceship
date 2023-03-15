@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9436bbb4a1aa43bfa5a15c612fb7aeca, type: 3}
   m_Name: SpaceshipB
   m_EditorClassIdentifier: 
-  Icon: {fileID: 21300000, guid: c2b7645c90fa98d4db84b257cc6f7c6f, type: 3}
-  Health: 60
-  Shield: 120
-  ShieldRegenPerSec: 1
-  WeaponSlotsCount: 2
-  ModuleSlotsCount: 3
+  _id: SpaceshipB
+  _health: 60
+  _shield: 120
+  _shieldRegenPerSec: 1
+  _weaponSlotsCount: 2
+  _moduleSlotsCount: 3

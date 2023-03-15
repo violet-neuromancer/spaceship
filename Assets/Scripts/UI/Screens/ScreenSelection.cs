@@ -1,4 +1,4 @@
-using Settings.Scriptables;
+using Model;
 using UI.Widgets;
 using UnityEngine;
 
@@ -7,14 +7,16 @@ namespace UI.Screens
     public class ScreenSelection : MonoBehaviour
     {
         [SerializeField] private WidgetSpaceshipSelection _widgetSpaceshipASelection;
-        [SerializeField] private SpaceshipSettings _spaceshipASettings;
         [SerializeField] private WidgetSpaceshipSelection _widgetSpaceshipBSelection;
-        [SerializeField] private SpaceshipSettings _spaceshipBSettings;
+
+        private ShipPreparationService _shipPreparationService;
 
         private void Start()
         {
-            _widgetSpaceshipASelection.Init(_spaceshipASettings);
-            _widgetSpaceshipBSelection.Init(_spaceshipBSettings);
+            _shipPreparationService = ServiceLocator.Get<ShipPreparationService>();
+            
+            _widgetSpaceshipASelection.Init(_shipPreparationService.SpaceshipA);
+            _widgetSpaceshipBSelection.Init(_shipPreparationService.SpaceshipB);
         }
     }
 }

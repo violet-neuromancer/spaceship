@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: ModuleC
   _componentType: 1
-  _icon: {fileID: 21300000, guid: b6a96c7c65795c94abf54a62adbf5c38, type: 3}
-  StatName: Reloading
-  ValueType: 1
-  Value: -20
+  _statName: Recharge
+  _valueType: 1
+  _value: -20

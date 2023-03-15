@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Model;
 using Settings.Enums;
 using Settings.Scriptables;
 using UnityEngine;
@@ -12,26 +13,27 @@ namespace UI.Widgets
         [SerializeField] private Image _imageSpaceship;
         [SerializeField] private Transform _weaponsContainer;
         [SerializeField] private Transform _modulesContainer;
+        [SerializeField] private SpriteIdPairList _spaceshipSpriteIdPairList;
 
         public List<WidgetSpaceshipComponent> WidgetWeapons { get; private set; }
         public List<WidgetSpaceshipComponent> WidgetModules { get; private set; }
 
-        public void Init(SpaceshipSettings spaceshipSettings)
+        public void Init(Spaceship spaceship)
         {
-            _imageSpaceship.sprite = spaceshipSettings.Icon;
+            _imageSpaceship.sprite = _spaceshipSpriteIdPairList.GetSpriteById(spaceship.Id);
             WidgetWeapons = new List<WidgetSpaceshipComponent>();
-            for (var i = 0; i < spaceshipSettings.WeaponSlotsCount; i++)
+            for (var i = 0; i < spaceship.Weapons.Length; i++)
             {
                 var widgetWeapon = Instantiate(widgetSpaceshipComponentPrefab, _weaponsContainer);
-                widgetWeapon.Init(ComponentType.Weapon);
+                widgetWeapon.Init(ComponentType.Weapon, i);
                 WidgetWeapons.Add(widgetWeapon);
             }
 
             WidgetModules = new List<WidgetSpaceshipComponent>();
-            for (var i = 0; i < spaceshipSettings.ModuleSlotsCount; i++)
+            for (var i = 0; i < spaceship.Modules.Length; i++)
             {
                 var widgetModule = Instantiate(widgetSpaceshipComponentPrefab, _modulesContainer);
-                widgetModule.Init(ComponentType.Module);
+                widgetModule.Init(ComponentType.Module, i);
                 WidgetModules.Add(widgetModule);
             }
         }

@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using Settings.Scriptables;
+using UnityEngine;
 
 namespace Model
 {
     public class EntryPoint : MonoBehaviour
     {
+        [SerializeField] private SpaceshipSettings _spaceshipSettingsA;
+        [SerializeField] private SpaceshipSettings _spaceshipSettingsB;
+        
         public void Awake()
         {
             var coroutinesHolderInstance = FindObjectOfType<CoroutinesHolder>();
@@ -17,8 +21,9 @@ namespace Model
             {
                 ServiceLocator.Register(coroutinesHolderInstance);
             }
-            
-            
+
+            var shipPreparationService = new ShipPreparationService(_spaceshipSettingsA, _spaceshipSettingsB);
+            ServiceLocator.Register(shipPreparationService);
         }
     }
 }

@@ -54,6 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _imageComponent: {fileID: 5374302195165837097}
   _labelName: {fileID: 1157012894768090352}
+  _componentSpriteIdPairList: {fileID: 11400000, guid: db74674f88372114a81073e1052c3c31, type: 2}
 --- !u!114 &8666424936854695716
 MonoBehaviour:
   m_ObjectHideFlags: 0

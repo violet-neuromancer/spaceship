@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: ModuleD
   _componentType: 1
-  _icon: {fileID: 21300000, guid: 5430b5412bcac5b4986be0a875a5e978, type: 3}
-  StatName: ShieldRecharge
-  ValueType: 1
-  Value: 20
+  _statName: ShieldRegenPerSec
+  _valueType: 1
+  _value: 20

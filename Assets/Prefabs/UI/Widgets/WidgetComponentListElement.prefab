@@ -100,6 +100,7 @@ MonoBehaviour:
   _imageComponent: {fileID: 5374302195165837097}
   _labelName: {fileID: 1157012894768090352}
   _labelBonus: {fileID: 7496670272508383897}
+  _componentIconSpriteIdPairList: {fileID: 11400000, guid: db74674f88372114a81073e1052c3c31, type: 2}
 --- !u!1 &2825675747538273290
 GameObject:
   m_ObjectHideFlags: 0

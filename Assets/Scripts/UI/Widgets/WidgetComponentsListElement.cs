@@ -13,6 +13,7 @@ namespace UI.Widgets
         [SerializeField] private Image _imageComponent; 
         [SerializeField] private TMP_Text _labelName;
         [SerializeField] private TMP_Text _labelBonus;
+        [SerializeField] private SpriteIdPairList _componentIconSpriteIdPairList;
         
         public ComponentType Type { get; private set; }
         public string Id { get; private set; }
@@ -23,8 +24,8 @@ namespace UI.Widgets
         {
             Type = settings.Type;
             Id = settings.Id;
-            
-            _imageComponent.sprite = settings.Icon;
+
+            _imageComponent.sprite = _componentIconSpriteIdPairList.GetSpriteById(settings.Id);
             _labelName.text = settings.Id;
 
             if (settings.Type == ComponentType.Weapon)

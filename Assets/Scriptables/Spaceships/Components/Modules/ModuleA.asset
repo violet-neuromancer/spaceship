@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: ModuleA
   _componentType: 1
-  _icon: {fileID: 21300000, guid: 0ccc508108fa6ed4fa11b4a467d7f609, type: 3}
-  StatName: Shield
-  ValueType: 0
-  Value: 50
+  _statName: Shield
+  _valueType: 0
+  _value: 50

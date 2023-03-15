@@ -119,6 +119,7 @@ MonoBehaviour:
   _imageSpaceship: {fileID: 3248110449937391052}
   _weaponsContainer: {fileID: 873881333742954008}
   _modulesContainer: {fileID: 873881332536763211}
+  _spaceshipSpriteIdPairList: {fileID: 11400000, guid: 1ca3f9bf3f158bb4599b440b968c0a43, type: 2}
 --- !u!1 &873881333742954009
 GameObject:
   m_ObjectHideFlags: 0

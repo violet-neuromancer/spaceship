@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Model;
 using Settings.Scriptables;
 using UnityEngine;
 
@@ -14,11 +15,14 @@ namespace UI.Widgets
 
         private readonly List<WidgetComponentsListElement> _widgetComponentsList = new();
 
+        private Spaceship _spaceship;
         private WidgetSpaceshipComponent _selectedComponentSlot;
 
-        public void Init(SpaceshipSettings spaceshipSettings)
+        public void Init(Spaceship spaceship)
         {
-            _widgetSpaceship.Init(spaceshipSettings);
+            _spaceship = spaceship;
+            
+            _widgetSpaceship.Init(spaceship);
 
             foreach (var component in _componentsList.AllSettings)
             {
@@ -54,7 +58,8 @@ namespace UI.Widgets
         private void OnComponentsListElementClicked(WidgetComponentsListElement selectedComponent)
         {
             _componentsList.TryGetSettings(selectedComponent.Id, out var componentSettings);
-            _selectedComponentSlot.SetData(componentSettings.Icon, componentSettings.Id);
+            _selectedComponentSlot.SetComponentData(componentSettings.Id);
+            _spaceship.ReplaceComponent(_selectedComponentSlot.Index, componentSettings);
             
             _selectedComponentSlot = null;
             _panelComponents.SetActive(false);
