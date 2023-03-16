@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using Settings.Enums;
-using Settings.Scriptables.Ship;
+﻿using Settings.Scriptables.Ship;
 
 namespace Game.Model
 {
@@ -43,54 +41,6 @@ namespace Game.Model
             _shieldRegenPerSec = settings.ShieldRegenPerSec;
             _weapons = new Weapon[settings.WeaponSlotsCount];
             _modules = new Module[settings.ModuleSlotsCount];
-        }
-
-        public void ApplyModules()
-        {
-            foreach (var module in _modules.Where(m => m != null))
-            {
-                switch (module.StatName)
-                {
-                    case "Health":
-                        _health = module.ApplyModification(_health);
-                        break;
-                    case "Shield":
-                        _shield = module.ApplyModification(_shield);
-                        break;
-                    case "ShieldRegenPerSec":
-                        _shieldRegenPerSec = module.ApplyModification(_shieldRegenPerSec);
-                        break;
-                    case "Recharge":
-                        foreach (var weapon in _weapons.Where(w => w != null))
-                        {
-                            weapon.Recharge = module.ApplyModification(weapon.Recharge);
-                        }
-                        break;
-                }
-            }
-        }
-
-        public void ReplaceComponent(int index, ComponentSettings componentSettings)
-        {
-            if (componentSettings.Type == ComponentType.Module)
-            {
-                ReplaceModule(index, (ModuleSettings)componentSettings);
-            }
-            
-            if (componentSettings.Type == ComponentType.Weapon)
-            {
-                ReplaceWeapon(index, (WeaponSettings)componentSettings);
-            }
-        }
-
-        private void ReplaceModule(int index, ModuleSettings moduleSettings)
-        {
-            Modules[index] = new Module(moduleSettings);
-        }
-
-        private void ReplaceWeapon(int index, WeaponSettings weaponSettings)
-        {
-            Weapons[index] = new Weapon(weaponSettings);
         }
     }
 }

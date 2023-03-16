@@ -15,8 +15,8 @@ namespace UI.Screens
         {
             _shipCustomisationService = ServiceLocator.Get<ShipCustomisationService>();
             
-            _widgetShipCustomisationA.Init(_shipCustomisationService.SpaceshipA);
-            _widgetShipCustomisationB.Init(_shipCustomisationService.SpaceshipB);
+            _widgetShipCustomisationA.Init(_shipCustomisationService.ShipA);
+            _widgetShipCustomisationB.Init(_shipCustomisationService.ShipB);
         }
 
         public void OnClick()
