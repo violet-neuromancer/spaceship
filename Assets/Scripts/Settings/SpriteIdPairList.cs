@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Settings.Scriptables
+namespace Settings
 {
     [CreateAssetMenu(menuName = "Spaceship/Pairs/New sprite-id", fileName = "SpriteIdPairList")]
     public class SpriteIdPairList : ScriptableObject

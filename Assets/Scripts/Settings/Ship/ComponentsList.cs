@@ -3,7 +3,7 @@ using System.Linq;
 using UnityEngine;
 using Utils;
 
-namespace Settings.Scriptables.Ship
+namespace Settings.Ship
 {
     public class ComponentsList : ScriptableObject
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Game.Model;
 using Game.Services;
-using Settings.Scriptables.Ship;
+using Settings.Ship;
 using UnityEngine;
 
 namespace UI.Widgets
@@ -79,7 +79,7 @@ namespace UI.Widgets
             
             foreach (var widgetComponentsListElement in _widgetComponentsList)
             {
-                widgetComponentsListElement.gameObject.SetActive(widgetComponentsListElement.Type == selectedComponentSlotSlot.Type);
+                widgetComponentsListElement.gameObject.SetActive(widgetComponentsListElement.Def == selectedComponentSlotSlot.Def);
             }
         }
 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ModuleB
   m_EditorClassIdentifier: 
   _id: ModuleB
-  _componentType: 1
+  _componentDef: 1
   _statName: Health
-  _valueType: 0
+  _valueDef: 0
   _value: 50

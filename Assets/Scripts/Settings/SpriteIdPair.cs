@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Settings.Scriptables
+namespace Settings
 {
     [Serializable]
     public struct SpriteIdPair

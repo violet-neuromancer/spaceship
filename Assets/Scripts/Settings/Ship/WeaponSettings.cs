@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Settings.Scriptables.Ship
+namespace Settings.Ship
 {
     [CreateAssetMenu(menuName = "Spaceship/New Weapon Settings", fileName = "NewWeaponSettings")]
     public class WeaponSettings : ComponentSettings

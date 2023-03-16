@@ -1,7 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Game.Model;
-using Settings.Enums;
-using Settings.Scriptables.Ship;
+using Settings.Ship;
 
 namespace Game.Services
 {
@@ -24,12 +24,12 @@ namespace Game.Services
 
         public void ReplaceComponent(Ship ship, int index, ComponentSettings componentSettings)
         {
-            if (componentSettings.Type == ComponentType.Module)
+            if (componentSettings.Def == ComponentDef.Module)
             {
                 ReplaceModule(ship, index, (ModuleSettings)componentSettings);
             }
             
-            if (componentSettings.Type == ComponentType.Weapon)
+            if (componentSettings.Def == ComponentDef.Weapon)
             {
                 ReplaceWeapon(ship, index, (WeaponSettings)componentSettings);
             }
@@ -61,11 +61,16 @@ namespace Game.Services
                         ship.ShieldRegenPerSec = module.ApplyModification(ship.ShieldRegenPerSec);
                         break;
                     case "Recharge":
+                    {
                         foreach (var weapon in ship.Weapons.Where(w => w != null))
                         {
                             weapon.Recharge = module.ApplyModification(weapon.Recharge);
                         }
                         break;
+                    }
+                    default:
+                        throw new ArgumentOutOfRangeException(
+                            $"Not founded stat {module.StatName}, module {module.Id}");
                 }
             }
         }

@@ -1,28 +1,31 @@
-﻿using Settings.Enums;
-using Settings.Scriptables.Ship;
+﻿using Settings;
+using Settings.Ship;
 
 namespace Game.Model
 {
     public class Module
     {
+        private string _id;
         private string _statName;
-        private ValueType _valueType;
+        private ValueDef _valueDef;
         private float _value;
 
+        public string Id => _id;
         public string StatName => _statName;
-        public ValueType ValueType => _valueType;
+        public ValueDef ValueDef => _valueDef;
         public float Value => _value;
 
         public Module(ModuleSettings settings)
         {
+            _id = settings.Id;
             _statName = settings.StatName;
-            _valueType = settings.ValueType;
+            _valueDef = settings.ValueDef;
             _value = settings.Value;
         }
 
         public float ApplyModification(float stat)
         {
-            stat = _valueType == ValueType.Absolute
+            stat = _valueDef == ValueDef.Absolute
                 ? stat + _value
                 : stat + stat * _value;
 

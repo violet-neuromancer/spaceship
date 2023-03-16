@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Game.Model;
-using Settings.Enums;
-using Settings.Scriptables;
+using Settings;
+using Settings.Ship;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,7 +27,7 @@ namespace UI.Widgets
             for (var i = 0; i < ship.Weapons.Length; i++)
             {
                 var widgetWeapon = Instantiate(widgetShipComponentSlotPrefab, _weaponsContainer);
-                widgetWeapon.Init(ComponentType.Weapon, i);
+                widgetWeapon.Init(ComponentDef.Weapon, i);
                 WidgetWeapons.Add(widgetWeapon);
             }
 
@@ -35,7 +35,7 @@ namespace UI.Widgets
             for (var i = 0; i < ship.Modules.Length; i++)
             {
                 var widgetModule = Instantiate(widgetShipComponentSlotPrefab, _modulesContainer);
-                widgetModule.Init(ComponentType.Module, i);
+                widgetModule.Init(ComponentDef.Module, i);
                 WidgetModules.Add(widgetModule);
             }
         }

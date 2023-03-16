@@ -1,10 +1,11 @@
 using Game.Services;
+using Settings.UI;
 using UI.Widgets;
 using UnityEngine;
 
 namespace UI.Screens
 {
-    public class ScreenCustomisation : MonoBehaviour
+    public class ScreenCustomisation : AbstractScreen
     {
         [SerializeField] private WidgetShipCustomisation _widgetShipCustomisationA;
         [SerializeField] private WidgetShipCustomisation _widgetShipCustomisationB;
@@ -22,6 +23,7 @@ namespace UI.Screens
         public void OnClick()
         {
             _shipCustomisationService.ApplyModules();
+            Service.Create(ScreenDef.Battle);
         }
     }
 }

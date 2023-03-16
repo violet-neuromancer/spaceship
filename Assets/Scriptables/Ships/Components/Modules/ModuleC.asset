@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ModuleC
   m_EditorClassIdentifier: 
   _id: ModuleC
-  _componentType: 1
+  _componentDef: 1
   _statName: Recharge
-  _valueType: 1
+  _valueDef: 1
   _value: -0.2

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Settings.Scriptables.Ship
+namespace Settings.Ship
 {
     [CreateAssetMenu(menuName = "Spaceship/New Spaceship Settings", fileName = "NewShipSettings")]
     public class ShipSettings : ScriptableObject

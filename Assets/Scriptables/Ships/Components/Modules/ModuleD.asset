@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ModuleD
   m_EditorClassIdentifier: 
   _id: ModuleD
-  _componentType: 1
+  _componentDef: 1
   _statName: ShieldRegenPerSec
-  _valueType: 1
+  _valueDef: 1
   _value: -0.2

@@ -1,6 +1,6 @@
 ﻿using System;
-using Settings.Enums;
-using Settings.Scriptables;
+using Settings;
+using Settings.Ship;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,15 +15,15 @@ namespace UI.Widgets
         [Header("Settings")]
         [SerializeField] private SpriteIdPairList _componentSpriteIdPairList;
 
-        public ComponentType Type { get; private set; }
+        public ComponentDef Def { get; private set; }
         public string ID { get; private set; }
         public int Index { get; private set; }
         
         public Action<WidgetShipComponentSlot> OnShipComponentClicked;
 
-        public void Init(ComponentType componentType, int index)
+        public void Init(ComponentDef componentDef, int index)
         {
-            Type = componentType;
+            Def = componentDef;
             Index = index;
         }
 

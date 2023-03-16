@@ -1,4 +1,4 @@
-﻿using Settings.Scriptables.Ship;
+﻿using Settings.Ship;
 using UnityEngine;
 
 namespace Game.Services

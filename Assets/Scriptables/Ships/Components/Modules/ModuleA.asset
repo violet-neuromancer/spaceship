@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ModuleA
   m_EditorClassIdentifier: 
   _id: ModuleA
-  _componentType: 1
+  _componentDef: 1
   _statName: Shield
-  _valueType: 0
+  _valueDef: 0
   _value: 50

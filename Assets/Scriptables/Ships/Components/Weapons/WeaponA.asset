@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: WeaponA
   m_EditorClassIdentifier: 
   _id: WeaponA
-  _componentType: 0
+  _componentDef: 0
   _recharge: 3
   _damage: 5
