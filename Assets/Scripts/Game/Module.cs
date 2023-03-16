@@ -1,8 +1,7 @@
 ﻿using Settings.Enums;
 using Settings.Scriptables;
-using UnityEngine;
 
-namespace Model
+namespace Game
 {
     public class Module
     {

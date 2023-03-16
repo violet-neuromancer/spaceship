@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Model;
+using Game;
 using Settings.Enums;
 using Settings.Scriptables;
 using UnityEngine;

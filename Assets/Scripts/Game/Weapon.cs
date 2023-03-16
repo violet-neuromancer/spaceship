@@ -1,6 +1,6 @@
 ﻿using Settings.Scriptables;
 
-namespace Model
+namespace Game
 {
     public class Weapon
     {

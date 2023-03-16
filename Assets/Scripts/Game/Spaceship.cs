@@ -1,7 +1,7 @@
 ﻿using Settings.Enums;
 using Settings.Scriptables;
 
-namespace Model
+namespace Game
 {
     public class Spaceship
     {
@@ -44,6 +44,32 @@ namespace Model
             _modules = new Module[settings.ModuleSlotsCount];
         }
 
+        public void ApplyModules()
+        {
+            foreach (var module in _modules)
+            {
+                switch (module.StatName)
+                {
+                    case "Health":
+                        _health = module.ApplyModification(_health);
+                        break;
+                    case "Shield":
+                        _shield = module.ApplyModification(_shield);
+                        break;
+                    case "ShieldRegenPerSec":
+                        _shieldRegenPerSec = module.ApplyModification(_shieldRegenPerSec);
+                        break;
+                    case "Recharge":
+                        foreach (var weapon in _weapons)
+                        {
+                            weapon.Recharge = module.ApplyModification(weapon.Recharge);
+                        }
+
+                        break;
+                }
+            }
+        }
+
         public void ReplaceComponent(int index, ComponentSettings componentSettings)
         {
             if (componentSettings.Type == ComponentType.Module)
@@ -65,15 +91,6 @@ namespace Model
         private void ReplaceWeapon(int index, WeaponSettings weaponSettings)
         {
             Weapons[index] = new Weapon(weaponSettings);
-        }
-
-        private float ApplyStatChange(float stat, float changeValue, ValueType valueType)
-        {
-            stat = valueType == ValueType.Absolute
-                ? stat + changeValue
-                : stat + stat * changeValue;
-
-            return stat;
         }
     }
 }

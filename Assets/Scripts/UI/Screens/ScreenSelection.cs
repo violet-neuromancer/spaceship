@@ -1,4 +1,4 @@
-using Model;
+using Game;
 using UI.Widgets;
 using UnityEngine;
 
