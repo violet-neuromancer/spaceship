@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5601639501606849959}
   - component: {fileID: 5601639501606849952}
   m_Layer: 5
-  m_Name: LabelSpaceshipName
+  m_Name: LabelShipName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 5601639501685900506}
   - component: {fileID: 5601639501685900505}
   m_Layer: 5
-  m_Name: Components
+  m_Name: Container
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 5601639502218143864}
   - component: {fileID: 5601639502218143865}
   m_Layer: 5
-  m_Name: ComponentsSelector
+  m_Name: Components
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -286,7 +286,7 @@ GameObject:
   - component: {fileID: 5601639502788947829}
   - component: {fileID: 6145841030452270978}
   m_Layer: 5
-  m_Name: WidgetSpaceshipSelection
+  m_Name: WidgetShipCustomisation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,10 +327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6c2add69d7472399d6be533bd7d5ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _widgetSpaceship: {fileID: 2394581247753446631}
+  _widgetShip: {fileID: 2394581247753446631}
   _panelComponents: {fileID: 5601639502218143867}
-  _components: {fileID: 5601639501685900506}
-  _widgetComponentPrefab: {fileID: 2559204426280831429, guid: 1b960ade8b2b43c4e9acb438e226a756, type: 3}
+  _componentsContainer: {fileID: 5601639501685900506}
+  _widgetComponentsListElementPrefab: {fileID: 2559204426280831429, guid: 1b960ade8b2b43c4e9acb438e226a756, type: 3}
   _componentsList: {fileID: 11400000, guid: 77e92b22c0f3de14aa6acef48708e289, type: 2}
 --- !u!1001 &4728114419742260516
 PrefabInstance:
@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 873881332597195268, guid: e90b9dd819732744a80c0a34309373d8, type: 3}
       propertyPath: m_Name
-      value: WidgetSpaceship
+      value: WidgetShip
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e90b9dd819732744a80c0a34309373d8, type: 3}

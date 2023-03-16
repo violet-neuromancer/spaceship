@@ -356,7 +356,7 @@ GameObject:
   - component: {fileID: 5322660584229664844}
   - component: {fileID: 1010040765891863057}
   m_Layer: 5
-  m_Name: ScreenSelection
+  m_Name: ScreenCustomisation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -398,8 +398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e379a4b41f0c2be4c993221d29f789d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _widgetSpaceshipASelection: {fileID: 5848644509659779024}
-  _widgetSpaceshipBSelection: {fileID: 6941860286300983684}
+  _widgetShipCustomisationA: {fileID: 5848644509659779024}
+  _widgetShipCustomisationB: {fileID: 6941860286300983684}
 --- !u!1001 &315505872080967762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -493,7 +493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601639502788947830, guid: 1b50cf65129e72c43a62f31e399cb914, type: 3}
       propertyPath: m_Name
-      value: WidgetSpaceshipSelection
+      value: WidgetShipSelection
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b50cf65129e72c43a62f31e399cb914, type: 3}
@@ -606,7 +606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1523284734552600099, guid: f9737d7537ca31b408ed9cbce13906b2, type: 3}
       propertyPath: m_Name
-      value: WidgetSpaceshipSelection_Bottom
+      value: WidgetShipSelection_Bottom
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9737d7537ca31b408ed9cbce13906b2, type: 3}

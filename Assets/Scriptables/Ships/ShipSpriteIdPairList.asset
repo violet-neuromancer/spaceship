@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1107492592da4bd08ac850f896eadf12, type: 3}
-  m_Name: SpaceshipSpriteIdPairList
+  m_Name: ShipSpriteIdPairList
   m_EditorClassIdentifier: 
   _pairs:
-  - _id: SpaceshipA
+  - _id: ShipA
     _sprite: {fileID: 21300000, guid: 111bf62de8eb0424da75abd26d89feb3, type: 3}
-  - _id: SpaceshipB
+  - _id: ShipB
     _sprite: {fileID: 21300000, guid: c2b7645c90fa98d4db84b257cc6f7c6f, type: 3}

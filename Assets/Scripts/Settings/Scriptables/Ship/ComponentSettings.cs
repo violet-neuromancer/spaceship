@@ -1,7 +1,7 @@
 ﻿using Settings.Enums;
 using UnityEngine;
 
-namespace Settings.Scriptables
+namespace Settings.Scriptables.Ship
 {
     public class ComponentSettings : ScriptableObject
     {

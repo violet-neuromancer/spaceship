@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 
-namespace Settings.Scriptables
+namespace Settings.Scriptables.Ship
 {
-    [CreateAssetMenu(menuName = "SpaceshipSettings/New Spaceship Settings", fileName = "NewSpaceshipSettings")]
-    public class SpaceshipSettings : ScriptableObject
+    [CreateAssetMenu(menuName = "Spaceship/New Spaceship Settings", fileName = "NewShipSettings")]
+    public class ShipSettings : ScriptableObject
     {
         [SerializeField] private string _id;
         [SerializeField] private int _health;

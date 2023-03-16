@@ -8,17 +8,18 @@ using UnityEngine.UI;
 
 namespace UI.Widgets
 {
-    public class WidgetSpaceshipComponent : MonoBehaviour, IPointerClickHandler
+    public class WidgetShipComponentSlot : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField] private Image _imageComponent;
         [SerializeField] private TMP_Text _labelName;
+        [Header("Settings")]
         [SerializeField] private SpriteIdPairList _componentSpriteIdPairList;
 
         public ComponentType Type { get; private set; }
         public string ID { get; private set; }
         public int Index { get; private set; }
         
-        public Action<WidgetSpaceshipComponent> OnComponentClicked;
+        public Action<WidgetShipComponentSlot> OnShipComponentClicked;
 
         public void Init(ComponentType componentType, int index)
         {
@@ -35,7 +36,7 @@ namespace UI.Widgets
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            OnComponentClicked?.Invoke(this);
+            OnShipComponentClicked?.Invoke(this);
         }
     }
 }

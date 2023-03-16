@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-namespace Settings.Scriptables
+namespace Settings.Scriptables.Ship
 {
-    [CreateAssetMenu(menuName = "SpaceshipSettings/New Weapon Settings", fileName = "NewWeaponSettings")]
+    [CreateAssetMenu(menuName = "Spaceship/New Weapon Settings", fileName = "NewWeaponSettings")]
     public class WeaponSettings : ComponentSettings
     {
         [SerializeField] private float _recharge;

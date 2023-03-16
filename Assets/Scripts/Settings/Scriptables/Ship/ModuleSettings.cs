@@ -1,9 +1,9 @@
 ﻿using Settings.Enums;
 using UnityEngine;
 
-namespace Settings.Scriptables
+namespace Settings.Scriptables.Ship
 {
-    [CreateAssetMenu(menuName = "SpaceshipSettings/New Module Settings", fileName = "NewModuleSettings")]
+    [CreateAssetMenu(menuName = "ShipSettings/New Module Settings", fileName = "NewModuleSettings")]
     public class ModuleSettings : ComponentSettings
     {
         [SerializeField] private string _statName;

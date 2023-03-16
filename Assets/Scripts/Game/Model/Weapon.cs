@@ -1,6 +1,6 @@
-﻿using Settings.Scriptables;
+﻿using Settings.Scriptables.Ship;
 
-namespace Game
+namespace Game.Model
 {
     public class Weapon
     {

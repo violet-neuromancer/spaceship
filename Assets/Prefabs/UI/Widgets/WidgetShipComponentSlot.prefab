@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6148794672862869662}
   - component: {fileID: 8666424936854695716}
   m_Layer: 5
-  m_Name: WidgetSpaceshipComponent
+  m_Name: WidgetShipComponentSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

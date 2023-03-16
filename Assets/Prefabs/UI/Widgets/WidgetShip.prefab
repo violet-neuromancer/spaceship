@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 873881332597195267}
   - component: {fileID: 6964502323339221443}
   m_Layer: 5
-  m_Name: WidgetSpaceship
+  m_Name: WidgetShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,10 +115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8534dd1e17c741dd8d374f107b1e1126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  widgetSpaceshipComponentPrefab: {fileID: 6148794672862869662, guid: 633e85838529f5b408c5a0b1f75d3f55, type: 3}
   _imageSpaceship: {fileID: 3248110449937391052}
   _weaponsContainer: {fileID: 873881333742954008}
   _modulesContainer: {fileID: 873881332536763211}
+  widgetShipComponentSlotPrefab: {fileID: 6148794672862869662, guid: 633e85838529f5b408c5a0b1f75d3f55, type: 3}
   _spaceshipSpriteIdPairList: {fileID: 11400000, guid: 1ca3f9bf3f158bb4599b440b968c0a43, type: 2}
 --- !u!1 &873881333742954009
 GameObject:
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 139695600948103823}
   - component: {fileID: 3248110449937391052}
   m_Layer: 5
-  m_Name: ImageSpaceship
+  m_Name: ImageShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

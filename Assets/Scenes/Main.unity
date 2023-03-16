@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8ca45983e4d41bb953530c496f83cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spaceshipSettingsA: {fileID: 11400000, guid: 390f9d3b5b8686f4c92e7214e81ace23, type: 2}
-  _spaceshipSettingsB: {fileID: 11400000, guid: e5265ac2b7d6f4e4193b4b5bcf5571b8, type: 2}
+  _shipSettingsA: {fileID: 11400000, guid: 390f9d3b5b8686f4c92e7214e81ace23, type: 2}
+  _shipSettingsB: {fileID: 11400000, guid: e5265ac2b7d6f4e4193b4b5bcf5571b8, type: 2}
 --- !u!4 &238778100
 Transform:
   m_ObjectHideFlags: 0

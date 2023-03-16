@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Settings.Scriptables
 {
-    [CreateAssetMenu(menuName = "SpaceshipSettings/Pairs/New sprite-id", fileName = "SpriteIdPairList")]
+    [CreateAssetMenu(menuName = "Spaceship/Pairs/New sprite-id", fileName = "SpriteIdPairList")]
     public class SpriteIdPairList : ScriptableObject
     {
         [SerializeField] private SpriteIdPair[] _pairs;

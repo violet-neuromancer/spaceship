@@ -1,9 +1,10 @@
-﻿using Settings.Enums;
-using Settings.Scriptables;
+﻿using System.Linq;
+using Settings.Enums;
+using Settings.Scriptables.Ship;
 
-namespace Game
+namespace Game.Model
 {
-    public class Spaceship
+    public class Ship
     {
         private string _id;
         private float _health;
@@ -34,7 +35,7 @@ namespace Game
         public Weapon[] Weapons => _weapons;
         public Module[] Modules => _modules;
 
-        public Spaceship(SpaceshipSettings settings)
+        public Ship(ShipSettings settings)
         {
             _id = settings.Id;
             _health = settings.Health;
@@ -46,7 +47,7 @@ namespace Game
 
         public void ApplyModules()
         {
-            foreach (var module in _modules)
+            foreach (var module in _modules.Where(m => m != null))
             {
                 switch (module.StatName)
                 {
@@ -60,11 +61,10 @@ namespace Game
                         _shieldRegenPerSec = module.ApplyModification(_shieldRegenPerSec);
                         break;
                     case "Recharge":
-                        foreach (var weapon in _weapons)
+                        foreach (var weapon in _weapons.Where(w => w != null))
                         {
                             weapon.Recharge = module.ApplyModification(weapon.Recharge);
                         }
-
                         break;
                 }
             }

@@ -1,6 +1,7 @@
 ﻿using System;
 using Settings.Enums;
 using Settings.Scriptables;
+using Settings.Scriptables.Ship;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,7 +19,7 @@ namespace UI.Widgets
         public ComponentType Type { get; private set; }
         public string Id { get; private set; }
 
-        public Action<WidgetComponentsListElement> OnWidgetClicked;
+        public Action<WidgetComponentsListElement> OnComponentsListElementClicked;
 
         public void SetData(ComponentSettings settings)
         {
@@ -43,7 +44,7 @@ namespace UI.Widgets
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            OnWidgetClicked?.Invoke(this);
+            OnComponentsListElementClicked?.Invoke(this);
         }
     }
 }
